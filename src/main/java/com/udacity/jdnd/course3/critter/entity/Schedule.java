@@ -1,13 +1,19 @@
 package com.udacity.jdnd.course3.critter.entity;
 
 import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
-public class Schedule {
+@Data
+@Entity
+@NoArgsConstructor
+public class Schedule implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +28,4 @@ public class Schedule {
 
     @ElementCollection
     private Set<EmployeeSkill> activities;
-
-    public void setDate(LocalDate date) {
-    }
 }

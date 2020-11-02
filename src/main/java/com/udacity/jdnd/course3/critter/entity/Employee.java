@@ -1,14 +1,27 @@
 package com.udacity.jdnd.course3.critter.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class Employee {
+import javax.persistence.*;
+import java.io.Serializable;
+import java.time.DayOfWeek;
+import java.util.Set;
+
+@Data
+@Entity
+@NoArgsConstructor
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String phoneNumber;
-    private String notes;
+
     private String name;
+
+    @ElementCollection
+    private Set<EmployeeSkill> skills;
+
+    @ElementCollection
+    private Set<DayOfWeek> daysAvailable;
 }

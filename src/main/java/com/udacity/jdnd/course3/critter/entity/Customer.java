@@ -1,20 +1,30 @@
 package com.udacity.jdnd.course3.critter.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
-@Table
+
+@Data
 @Entity
-public class Customer {
+@NoArgsConstructor
+public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String phoneNumber;
     private String notes;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = Pet.class)
     private List<Pet> pets;
 
+    public void insertPet(Pet pet) {
+        pets.add(pet);
+    }
 }
 
