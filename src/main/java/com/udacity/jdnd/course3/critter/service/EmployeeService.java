@@ -21,10 +21,6 @@ public class EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    public Employee saveEmployee(Employee employee) {
-        return employeeRepository.save(employee);
-    }
-
     public Employee getEmployeeById(Long employeeId) {
         return employeeRepository.getOne(employeeId);
     }
@@ -36,17 +32,13 @@ public class EmployeeService {
         return employees;
     }
 
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
+
     public void setEmployeeAvailability(Set<DayOfWeek> days, Long employeeId) {
         Employee employee = employeeRepository.getOne(employeeId);
         employee.setDaysAvailable(days);
         employeeRepository.save(employee);
-    }
-
-    public List<Employee> findAll() {
-        return employeeRepository.findAll();
-    }
-
-    public Employee findById(Long employeeId) {
-        return employeeRepository.getOne(employeeId);
     }
 }

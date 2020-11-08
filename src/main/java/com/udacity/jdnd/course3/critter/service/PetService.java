@@ -31,10 +31,10 @@ public class PetService {
     }
 
     public List<Pet> findAllPetsByCustomerId(Long customerId) {
-        return petRepository.findPetsByCustomerId(customerId);
+        return petRepository.findAll(); //findPetsByCustomerId(customerId);
     }
 
-    public Pet save(Pet pet, Long ownerId) {
+    public Pet savePet(Pet pet, Long ownerId) {
         Customer customer = customerRepository.getOne(ownerId);
         pet.setCustomer(customer);
         pet = petRepository.save(pet);

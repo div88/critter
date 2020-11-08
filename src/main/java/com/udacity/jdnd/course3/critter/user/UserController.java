@@ -1,15 +1,15 @@
 package com.udacity.jdnd.course3.critter.user;
 
-import com.udacity.jdnd.course3.critter.service.CustomerService;
-import com.udacity.jdnd.course3.critter.service.EmployeeService;
+
 import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.entity.Employee;
 import com.udacity.jdnd.course3.critter.entity.Pet;
+import com.udacity.jdnd.course3.critter.service.CustomerService;
+import com.udacity.jdnd.course3.critter.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.DayOfWeek;
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -75,7 +75,7 @@ public class UserController {
         Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
         employee.setDaysAvailable(employeeDTO.getDaysAvailable());
-        employee.setSkills(employee.getSkills());
+        employee.setSkills(employeeDTO.getSkills());
         return getEmployeeDTO(employeeService.saveEmployee(employee));
     }
 

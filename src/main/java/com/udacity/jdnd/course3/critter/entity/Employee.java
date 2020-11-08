@@ -15,13 +15,10 @@ import java.util.Set;
 public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private long id;
     private String name;
-
     @ElementCollection
     private Set<EmployeeSkill> skills;
-
     @ElementCollection
     private Set<DayOfWeek> daysAvailable;
 }

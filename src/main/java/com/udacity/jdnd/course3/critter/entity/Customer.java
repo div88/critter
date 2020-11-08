@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-
 @Data
 @Entity
 @NoArgsConstructor
@@ -15,7 +14,6 @@ public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String phoneNumber;
     private String notes;
