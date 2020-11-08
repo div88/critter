@@ -49,8 +49,8 @@ public class PetController {
     }
 
     @GetMapping("/owner/{ownerId}")
-    public List<PetDTO> getPetsByOwner(@PathVariable Long customerId) {
-        List<Pet> pets = petService.findAllPetsByCustomerId(customerId);
+    public List<PetDTO> getPetsByOwner(@PathVariable long ownerId) {
+        List<Pet> pets = petService.findAllPetsByCustomerId(ownerId);
         return pets.stream().map(this::getPetsDTO).collect(Collectors.toList());
     }
 }
