@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------
+Test set: com.udacity.jdnd.course3.critter.CritterFunctionalTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 6.891 s <<< FAILURE! - in com.udacity.jdnd.course3.critter.CritterFunctionalTest
+testFindOwnerByPet  Time elapsed: 0.242 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindOwnerByPet(CritterFunctionalTest.java:111)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindOwnerByPet(CritterFunctionalTest.java:111)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "CUSTOMER" not found; SQL statement:
+insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindOwnerByPet(CritterFunctionalTest.java:111)
+
+testFindEmployeesByServiceAndTime  Time elapsed: 0.04 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into employee (id, name) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindEmployeesByServiceAndTime(CritterFunctionalTest.java:149)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindEmployeesByServiceAndTime(CritterFunctionalTest.java:149)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEE" not found; SQL statement:
+insert into employee (id, name) values (null, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindEmployeesByServiceAndTime(CritterFunctionalTest.java:149)
+
+testAddPetsToCustomer  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testAddPetsToCustomer(CritterFunctionalTest.java:68)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testAddPetsToCustomer(CritterFunctionalTest.java:68)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "CUSTOMER" not found; SQL statement:
+insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testAddPetsToCustomer(CritterFunctionalTest.java:68)
+
+testCreateCustomer  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateCustomer(CritterFunctionalTest.java:48)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateCustomer(CritterFunctionalTest.java:48)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "CUSTOMER" not found; SQL statement:
+insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateCustomer(CritterFunctionalTest.java:48)
+
+testSchedulePetsForServiceWithEmployee  Time elapsed: 0.012 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into employee (id, name) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testSchedulePetsForServiceWithEmployee(CritterFunctionalTest.java:176)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testSchedulePetsForServiceWithEmployee(CritterFunctionalTest.java:176)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEE" not found; SQL statement:
+insert into employee (id, name) values (null, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testSchedulePetsForServiceWithEmployee(CritterFunctionalTest.java:176)
+
+testFindPetsByOwner  Time elapsed: 0.011 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindPetsByOwner(CritterFunctionalTest.java:93)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindPetsByOwner(CritterFunctionalTest.java:93)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "CUSTOMER" not found; SQL statement:
+insert into customer (id, name, notes, phone_number) values (null, ?, ?, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindPetsByOwner(CritterFunctionalTest.java:93)
+
+testCreateEmployee  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into employee (id, name) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateEmployee(CritterFunctionalTest.java:58)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateEmployee(CritterFunctionalTest.java:58)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEE" not found; SQL statement:
+insert into employee (id, name) values (null, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testCreateEmployee(CritterFunctionalTest.java:58)
+
+testChangeEmployeeAvailability  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into employee (id, name) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testChangeEmployeeAvailability(CritterFunctionalTest.java:125)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testChangeEmployeeAvailability(CritterFunctionalTest.java:125)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEE" not found; SQL statement:
+insert into employee (id, name) values (null, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testChangeEmployeeAvailability(CritterFunctionalTest.java:125)
+
+testFindScheduleByEntities  Time elapsed: 0.009 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into employee (id, name) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.lambda$populateSchedule$1(CritterFunctionalTest.java:286)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.populateSchedule(CritterFunctionalTest.java:287)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindScheduleByEntities(CritterFunctionalTest.java:198)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.lambda$populateSchedule$1(CritterFunctionalTest.java:286)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.populateSchedule(CritterFunctionalTest.java:287)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindScheduleByEntities(CritterFunctionalTest.java:198)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEE" not found; SQL statement:
+insert into employee (id, name) values (null, ?) [42102-200]
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.lambda$populateSchedule$1(CritterFunctionalTest.java:286)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.populateSchedule(CritterFunctionalTest.java:287)
+	at com.udacity.jdnd.course3.critter.CritterFunctionalTest.testFindScheduleByEntities(CritterFunctionalTest.java:198)
+

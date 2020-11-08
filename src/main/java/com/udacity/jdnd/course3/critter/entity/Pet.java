@@ -21,4 +21,13 @@ public class Pet implements Serializable {
     private Customer customer;
     private LocalDate birthDate;
     private String notes;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
 }

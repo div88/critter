@@ -32,13 +32,14 @@ public class PetController {
     public PetDTO savePet(@RequestBody PetDTO petDTO) {
         Pet pet = new Pet();
         pet.setType(petDTO.getType());
+        pet.setName(petDTO.getName());
         pet.setBirthDate(petDTO.getBirthDate());
         pet.setNotes(petDTO.getNotes());
         return getPetsDTO(petService.savePet(pet, petDTO.getOwnerId()));
     }
 
     @GetMapping("/{petId}")
-    public PetDTO getPet(@PathVariable Long petId) {
+    public PetDTO getPet(@PathVariable long petId) {
         return getPetsDTO(petService.findByPetId(petId));
     }
 
